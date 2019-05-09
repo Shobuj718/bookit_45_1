@@ -1,0 +1,1059 @@
+body, body .title, .application{
+    font-family: 'Open Sans', sans-serif!important;
+}
+.reverse .v-card__text{
+    text-align: right;
+}
+
+.custom-default{
+    color: rgba(0,0,0,.54);
+    caret-color: rgba(0,0,0,.54);
+}
+
+.cyan--text .theme--light{
+    caret-color: #00bcd4!important;
+    color: #00bcd4!important;
+}
+
+.laptop-holder{
+    width: 500px;
+    height: 261px;
+    background: url("../images/laptop-frame.png");
+}
+
+.phone-holder{
+    width: 137px;
+    height: 261px;
+    background: url("../images/phone-frame.png");
+    left: -125px;
+    top: 13px;
+    transform: scale(0.9);
+}
+
+.laptop-holder, .phone-holder{
+    position: relative;
+    background-size: contain;
+    display: inline-block;
+}
+
+.laptop-holder iframe{
+    position: absolute;
+    top: -243px;
+    left: -332px;
+    width: 1163px;
+    height: 734px;
+    transform: scale(0.3);
+}
+
+.phone-holder iframe{
+    position: absolute;
+    top: -269px;
+    left: -171px;
+    width: 480px;
+    height: 799px;
+    transform: scale(0.25);
+}
+
+.custom-label{
+    margin-top: 16px;
+    padding-top: 4px;
+    line-height: 20px;
+} 
+.sidebar-logo img {
+    width: 50px;
+}
+
+.sidebar-logo {
+    padding-left: 20px;
+}
+aside.user_sidebar {
+    z-index: 9;
+    margin-top: 0px!important;
+    padding-top: 15px;
+    background-color: #384766!important;
+}
+aside.user_sidebar {
+    z-index: 9;
+    margin-top: 0px!important;
+    padding-top: 15px;
+    background-color: #384766!important;
+    max-height: 100%!important;
+    width: 215px!important;
+}
+
+.user_sidebar a {
+    color: #9ea6b5;
+    font-weight: 600!important;
+}
+
+.user_sidebar a i {
+    color: #9ea6b5!important;
+}
+
+.user_sidebar a.cyan--text {
+    color: #fff!important;
+}
+
+.user_sidebar a.cyan--text i {
+    color: #fff!important;
+}
+
+nav.v-toolbar.v-toolbar--clipped.v-toolbar--fixed.theme--dark.cyan {
+    background-color: #f8f9fb!important;
+    border-color: #f8f9fb!important;
+    box-shadow: 0 0 0;
+}
+button.icon-color i {
+    color: #586a7e!important;
+}
+img.user_avatar {
+    border-radius: 50%;
+}
+main.v-content.dashboard_content {
+    padding-left: 215px!important;
+}
+.boxshadow0.elevation-2 {
+    box-shadow: 0 0 0!important;
+}
+
+.border1 {
+    border: 1px solid #D6DBE6!important;
+}
+
+.v-card__title h4.title {
+    color: rgba(0,0,0,0.87)!important;
+    font-size: 17px!important;
+    font-weight: 600;
+    width: 100%;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+.v-card__text.padding26 {
+    padding: 26px;
+}
+.pay-box {
+    text-align: center;
+}
+
+.pay-box .v-card__title {
+    text-align: center!important;
+}
+
+.pay-box .v-card__title span.subheading {
+    display: block;
+    width: 100%;
+    font-size: 12px!important;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.54);
+    line-height: 1.2;
+    padding: 35px 0 0px 0;
+    transition: .3s;
+}
+
+.pay-box .v-card__text {
+    padding-top: 0;
+    padding-bottom: 40px;
+}
+
+.pay-box .v-card__text span.display-2 {
+    font-size: 27px!important;
+    transition: .3s;
+}
+
+.pay-box .v-card__title {
+    padding: 0;
+}
+
+.pay-box {
+    transition: .3s;
+    cursor: pointer;
+}
+
+.pay-box:hover {
+    background: #e3a354;
+    border: 1px solid #e3a354!important;
+}
+
+.pay-box:hover .v-card__title span.subheading {
+    color: #fff;
+}
+
+.pay-box:hover .v-card__text span.display-2 {
+    color: #fff;
+}
+.v-card__title.padding26 {
+    padding: 26px 26px 0px 26px;
+}
+h4.subheading.subtitle {
+    padding: 0 26px;
+    margin-bottom: 23px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.87);
+    font-size: 15px!important;
+    margin-top: 20px;
+}
+
+.v-card__text.sidebar_list {
+    padding: 0;
+}
+
+.sidebar_list div[role=listitem], .calendar_text div[role=listitem] {
+    border-top: 1px solid #E9EDF4;
+}
+.sidebar_list div[role=listitem]:last-child, .calendar_text div[role=listitem]:last-child{
+    border-bottom: 1px solid #E9EDF4;
+}
+.sidebar_list div[role=listitem] a.v-list__tile, .calendar_text div[role=listitem] a.v-list__tile  {padding: 0 26px;}
+
+.sidebar_list div[role=listitem] a.v-list__tile .v-list__tile__title, .calendar_text div[role=listitem] a.v-list__tile .v-list__tile__title {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.sidebar_list div[role=listitem] a.v-list__tile .v-list__tile__sub-title, .calendar_text div[role=listitem] a.v-list__tile .v-list__tile__sub-title  {
+    font-size: 12px;
+    color: rgba(0,0,0,0.7);
+}
+.v-card__title.padding26.page_title {
+    padding-bottom: 26px;
+}
+.container.grid-list-md.fluid.fill-height.padding-t {
+    padding-top: 0;
+}
+.elevation-2 {
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12)!important;
+}
+.calendar_text .border1 .v-card__text {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.inbox_list .v-list__tile__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    text-transform: capitalize;
+}
+
+.inbox_list .v-list__tile__sub-title {
+    color: #000!important;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.v-list--three-line .inbox_list .v-list__tile {
+    height: 60px;
+}
+
+.v-list--three-line .inbox_list .v-list__tile .layout.row {
+    padding: 8px 15px!important;
+    height: 60px!important;
+}
+.v-tabs__div.inbox-tab a {
+    background: #ededf2;
+    color: #000;
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    height: 37px;
+    margin: 0 5px;
+    border-radius: 2px;
+}
+.v-tabs__div.inbox-tab a.v-tabs__item--active, button.save_btn{
+    background: #3ac18f;
+    color: #fff;
+    color: #fff!important;
+    font-size: 13px!important;
+}
+
+.inbox_list .v-list__tile__avatar {
+    margin-top: 0px!important;
+}
+.v-card__text.plr-0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+
+div#calendar .fc-state-default {
+    box-shadow: 0 0 0!important;
+    background: no-repeat;
+    border: 0px;
+    text-transform: uppercase;
+    color: #000;
+    height: 52px;
+}
+
+div#calendar .fc-toolbar.fc-header-toolbar {
+    background: #fff;
+    margin-bottom: 0;
+    padding: 10px 0 0 10px;
+}
+
+div#calendar .fc-state-default.fc-state-active {
+    font-weight: 600;
+    border-bottom: 4px solid #e07b38;
+}
+
+div#calendar .fc-toolbar.fc-header-toolbar .fc-center h2 {
+    font-weight: 500;
+    font-size: 14px;
+    padding-top: 15px;
+}
+
+div#calendar .fc-widget-header {
+    font-weight: 300;
+    background: #fff;
+}
+
+div#calendar .fc-widget-header a {
+    color: #000;
+}
+
+div#calendar .fc-widget-header.fc-today a {
+    color: #16a085;
+    font-weight: 600;
+}
+
+div#calendar .fc-time-grid table tbody tr td:first-child {
+    background: #fff;
+}
+
+div#calendar .fc-day-grid table tbody tr td:first-child {
+    background: #fff;
+}
+div#calendar .fc-day-grid table tbody tr td.fc-sun:first-child {
+    background: #fafafa;
+}
+div#calendar .fc-state-default:focus {
+    outline: 0;
+}
+.clients-card .v-list__tile__content span {
+    font-weight: 600;
+    color: #000;
+    font-size: 14px!important;
+}
+.clients-card .v-list__tile.v-list__tile--avatar.theme--light {
+    height: 26px;
+}
+
+.clients-card .client-avatar .v-list__tile.v-list__tile--avatar.theme--light {
+    height: 56px;
+}
+
+.clients-card .v-list__tile.v-list__tile--avatar.theme--light i {
+    font-size: 19px;
+    color: #9ea6b5;
+}
+
+.clients-card .v-list__tile.v-list__tile--avatar.theme--light  span.subheading {
+    font-size: 14px!important;
+    font-weight: 300;
+    color: #9ea6b5;
+}
+
+.clients-card {
+    transition: .3s;
+    cursor: pointer;
+}
+
+.clients-card:hover {
+    background: #fff5e2;
+}
+
+.clients-card:hover .v-list.theme--light {
+    background: #fff5e2;
+}
+
+.payment_box span.subheading, .doc_box span.title {
+    font-weight: 300;
+    font-size: 14px!important;
+    text-transform: uppercase;
+}
+
+.payment_box  .v-card__title i, .doc_box  .v-card__title i{
+    color: #3ac18f;
+    display: inline-block;
+    position: absolute;
+    right: 11px;
+}
+.doc_box  .v-card__title i{
+    color: #000;
+}
+.doc_box  .v-card__title i.incom {
+    color: #3ac18f;
+}
+.payment_box .v-card.v-sheet.theme--light.elevation-2, .doc_box .v-card.v-sheet.theme--light.elevation-2 {
+    transition: .3s;
+    cursor: pointer;
+}
+
+.payment_box .v-card.v-sheet.theme--light.elevation-2:hover, .doc_box .v-card.v-sheet.theme--light.elevation-2:hover, .doc_box .v-card.v-sheet.theme--light.elevation-2:hover .theme--light.v-list {
+    background: #fff5e2;
+}
+
+.payment_box .v-card__title, .doc_box .v-card__title {
+    padding-bottom: 0;
+}
+
+.payment_box span.display-2 {
+    font-size: 25px!important;
+    font-weight: 400;
+}
+
+.payment_box .v-card__text {
+    padding-top: 0;
+}
+
+.doc_box .v-list.theme--light i {
+    color: #333;
+    font-size: 20px;
+}
+
+.doc_box .v-list.theme--light .v-list__tile__content {
+    font-weight: 600!important;
+    font-size: 14px;
+}
+
+.doc_box .v-list__tile--avatar {
+    height: 38px;
+}
+.client-p span.title, .cptitle .title {
+    font-weight: 600;
+    color: rgba(0,0,0,0.87);
+    font-size: 16px!important;
+    text-transform: capitalize;
+}
+.client-p a.v-btn.theme--light {
+    position: absolute;
+    right: 6px;
+    border-radius: 0px!important;
+    background-color: #4675d9!important;
+    color: #fff;
+    font-size: 12px;
+}
+
+.client-p a.v-btn.theme--light i {
+    font-size: 14px;
+    padding-left: 5px;
+}
+.cp-title span {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+i.v-icon.micon {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 48px;
+    display: inline-block;
+    opacity: 0.45;
+    margin: 0 23px;
+    transition: .3s;
+}
+
+.setting-col-1 i.v-icon.micon {
+    color: #efc74a;
+}
+
+.setting-col-2 i.v-icon.micon {
+    color: #81c884;
+}
+
+.setting-col-3 i.v-icon.micon {
+    color: #c06fc0;
+}
+.setting-page .v-card__text, .setting-page .v-card__text div[role=list] {
+    padding: 0;
+}
+
+.setting-page .v-card__text div[role=listitem] a {
+    padding: 20px 16px;
+    height: 100px;
+}
+
+.setting-page .v-card__text div[role=listitem] a:hover i {
+    opacity: 1!important;
+}
+
+.setting-page .v-card__text button.v-btn.v-btn--icon {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
+
+.setting-page .v-card__text button.v-btn.v-btn--icon i {
+    font-size: 21px;
+    opacity: .45;
+}
+.border-top {
+    border-top: 5px solid #efc74a!important;
+}
+.setting-col-2 .border-top {
+    border-color: #81c884!important;
+}
+.setting-col-3 .border-top {
+    border-color: #c06fc0!important;
+}
+h4.title.col-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px!important;
+    font-weight: 600;
+    color: rgba(0,0,0,0.87);
+}
+.right-nav a {
+    display: block;
+    line-height: 2;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.right-nav span.title {
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    font-size: 14px!important;
+    padding-bottom: 10px;
+}
+
+.right-nav .v-card__text {
+    padding-top: 0;
+}
+.business-desc .v-card__title span.title, .staff-title span.title {
+    color: rgba(0,0,0,0.87);
+    font-size: 16px!important;
+    font-weight: 600;
+}
+.business-info-page input, .business-info-page textarea, .business-info-page .v-select__selections, .business-info-page .v-input--selection-controls label, .add-staff input, .add-staff textarea, .add-staff .v-select__selections, .add-staff .v-input--selection-controls label {
+    font-size: 14px!important;
+    font-family: "Open Sans"!important;
+    color: rgba(0,0,0,0.87)!important;
+}
+.add-staff .v-text-field .v-label{
+    font-size: 14px!important;
+}
+.business-info-page .accent--text {color: #3ac18f!important;caret-color: #3ac18f!important; font-size: 20px;}
+.layout.profile-center {
+    text-align: center;
+    background: #f1f0ef;
+    margin-bottom: 13px!important;
+    padding-top: 10px;
+}
+
+.layout.profile-center h4.subheading, span.custom-style {
+    font-weight: 600;
+    font-size: 14px!important;
+    margin-bottom: 10px;
+}
+button.v-btn.theme--light.custom-btn {
+    background: #3ac18f!important;
+    color: #fff;
+    font-size: 11px!important;
+    border-color: #3ac18f!important;
+    margin-right: 5px;
+}
+.theme--light.v-text-field>.v-input__control>.v-input__slot:before {
+    border-color: rgba(0,0,0,0.12)!important;
+}
+span.subheading.staff-name {
+    font-size: 14px!important;
+    color: rgba(0,0,0,0.87);
+    font-weight: 600;
+    display: block;
+    margin-top: 5px;
+}
+
+span.subheading.staff-email {
+    color: rgba(0,0,0,0.54);
+    margin-top: 3px;
+    font-size: 14px!important;
+    text-transform: lowercase;
+}
+.flex.staff-btn {
+    text-align: right;
+}
+
+.flex.staff-btn a, .flex.staff-btn button, .new-staff-btn{
+    font-size: 13px!important;
+    color: #fff!important;
+    background: #3ac18f!important;
+    border-color: #3ac18f!important;
+    text-transform: capitalize;
+}
+
+.flex.staff-btn a i, .flex.staff-btn button i {
+    font-size: 13px;
+    padding-left: 5px;
+}
+a.new-staff-btn.v-btn.theme--light {
+    margin-left: 0;
+    width: 170px;
+    height: 32px;
+}
+.plan-style h4.subheading {
+    font-weight: 600;
+    font-size: 14px!important;
+    text-transform: capitalize;
+}
+
+.plan-style h3.title {
+    font-weight: 600;
+    font-size: 16px!important;
+    margin: 2px 0;
+}
+
+.plan-style h5 {
+    font-weight: 400;
+    color: rgba(0,0,0,0.54);
+}
+.plan-style button.custom-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.v-list__tile__content.subscription-title {
+    color: #3ac18f;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.v-list__tile__action.subscribe-btn {
+    margin-top: 20px;
+}
+
+.v-card__text.plan-style {
+    border-bottom: 1px solid #586a7e26;
+}
+.chat-box {
+    background: #fff;
+}
+
+.chat-card {
+    background: #f2f2f2;
+    border-radius: 10px;
+    padding: 15px;
+}
+.appoinment-radio {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.appoinment-radio .v-input__slot {
+    margin-bottom: 0!important;
+}
+
+
+
+
+/*Chat Box*/
+.chat-box .container {
+    padding: 0 24px;
+}
+
+.chat-box-title {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.chat-box-title .small-headline {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.chat-box-title button.v-btn {
+    font-size: 11px;
+    text-transform: capitalize;
+    margin: 12px 10px;
+}
+
+.chat-box-title button.v-btn i {
+    color: #f0b04d!important;
+    margin-right: 5px;
+    font-size: 23px;
+    margin-top: -2px;
+}
+
+.chat-box-title button.v-btn:hover:before {
+    background-color: transparent;
+    border: 1px solid;
+}
+.chat-lists .v-card__title {
+    padding: 0px!important;
+    font-size: 14px!important;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.chat-card .v-card__text {
+    padding: 0;
+}
+
+.chat-card .appoin-text {
+    font-weight: 400;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+.appoin-date {
+    background: #fff;
+    border: 1px solid #e0e6ea;
+}
+
+.v-card__title.appoin-date-title {
+    font-size: 13px!important;
+    color: #3b82ff;
+    padding: 10px!important;
+}
+
+.v-card__title.appoin-date-title i {
+    color: #82b1ff;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.chat-lists .v-card__title.radio-title {
+    font-size: 12px!important;
+    font-weight: 300!important;
+    padding-left: 10px!important;
+}
+
+.chat-lists .v-input label {
+    font-size: 11px;
+}
+
+.chat-lists .v-input .v-radio i, .documents-fields .v-input .v-radio i{
+    font-size: 17px;
+    color: #3ac18f!important;
+}
+
+.chat-lists .v-input .v-radio .v-input--selection-controls__input {
+    margin-right: 0px;
+}
+.location-area a {
+    font-size: 12px;
+    text-decoration: underline;
+    color: #3b82ff;
+}
+
+.accept-edit-area {
+    border-top: 1px solid #e0e0e0;
+    margin: 10px 0 0!important;
+    padding: 5px 0;
+}
+
+.accept-edit-area button {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #3b82ff!important;
+    min-width: auto!important;
+    width: 30px!important;
+    height: auto;
+}
+.chat-card.card-left{
+        border-bottom-left-radius: 0px;
+}
+.chat-card.card-right{
+        border-bottom-right-radius: 0px;
+}
+.chat-box-title {
+    margin-bottom: 20px!important;
+}
+.msg-icons, .msg-icons i {
+    font-size: 10px;
+    font-weight: 300;
+    color: rgba(0,0,0,0.54);
+}
+
+.msg-icons i {
+    margin-right: 4px;
+    font-size: 12px;
+}
+.msg-icons span {
+    margin: 0 10px;
+}
+button.icon-button.v-btn.theme--light {
+    padding: 0 10px!important;
+    min-width: 52px;
+    background-color: #f0f2f7!important;
+    box-shadow: 0 0 0!important;
+    height: 60px;
+    margin: 0;
+    color: #4675d9;
+}
+
+button.icon-button.v-btn.theme--light:hover {
+    background-color: #4675d9!important;
+    color: #fff!important;
+}
+button.icon-button.send-btn.v-btn.v-btn--small.theme--light {
+    background: #3ac18f!important;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+button.icon-button.send-btn.v-btn.v-btn--small.theme--light i {
+    font-size: 24px!important;
+    margin-right: 5px;
+}
+.msg-box.v-text-field--outline>.v-input__control>.v-input__slot {
+    background-color: #f0f2f7!important;
+    border-color: #f0f2f7!important;
+}
+.website-dialog .v-card__title.headline {
+    font-size: 20px!important;
+    font-weight: 600;
+}
+
+.website-dialog .v-card__title.small-title {
+    font-size: 13px;
+    padding-bottom: 0;
+    padding-top: 0;
+    color: rgba(0,0,0,0.54);
+}
+
+.website-dialog .v-card__text {
+    padding-top: 0;
+}
+
+.website-dialog .v-card__actions {
+    border-top: 1px solid #e0e0e0;
+}
+
+.website-dialog .v-card__text a {
+    color: #3b82ff;
+}
+
+.website-dialog .v-card__actions button {
+    color: #3b82ff!important;
+    font-size: 13px;
+    font-weight: 600;
+}
+.menu-links .v-dialog__container {
+    display: block!important;
+    width: 100%;
+}
+
+.v-list.menu-links {
+    padding: 0 10px;
+}
+
+.v-list.menu-links .modal-btn {
+    padding: 10px 18px;
+    transition: .3s;
+    font-size: 13px;
+}
+
+.v-list.menu-links .modal-btn:hover {
+    background: #f2f2f2;
+}
+.website-dialog .theme--light.v-label {
+    color: rgba(0,0,0,0.38);
+    font-size: 14px;
+}
+.website-dialog input {
+    font-size: 14px!important;
+}
+.website-dialog .confirmation-check label{
+    color: rgba(0,0,0,.87)!important;
+    font-size: 14px!important;
+}
+.confirmation-check .v-input {
+    margin: 0;
+}
+
+.confirmation-check .v-input .v-input__slot {
+    margin: 0;
+}
+.website-dialog .v-card__title.headline i {
+    color: #8798be;
+    top: 18px;
+    position: absolute;
+    right: 13px;
+    font-size: 29px;
+}
+.v-card__text.new_appointment_fields .v-input {
+    margin: 0;
+    padding: 0;
+}
+.avatar-details .v-card__title {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.avatar-details .v-card__title.avater-title {
+    font-weight: 600;
+}
+
+.avatar-details .v-card__title.avater-email {
+    font-size: 13px;
+}
+.doc_btn  button {
+    background: #f1f0ef;
+    border-radius: 5px;
+    padding: 10px 0;
+    height: 68px;
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+.doc_btn .filepond--wrapper label {
+    cursor: pointer;
+}
+
+.documents-fields .v-card__title.small-title {
+    padding-left: 0;
+    color: rgba(0,0,0,.87);
+    font-size: 13px;
+    font-weight: 600;
+}
+.documents-fields .v-input label{
+    font-size: 13px!important;
+}
+.documents-fields .v-input .v-input--radio-group__input label, .documents-fields .v-input.checkbox label {
+    color: rgba(0,0,0,.87)!important;
+    font-size: 13px!important;
+}
+.business_info .v-card__title {
+    padding-left: 0;
+}
+
+.business_info .v-card__title.form-title {
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.business_info .v-card__title.small-title {
+    color: rgba(0,0,0,.87);
+}
+
+.business_info .checkbox label {
+    color: rgba(0,0,0,.87)!important;
+}
+
+.v-card__text.invoice_details .flex.xs12.sm6.md6 {
+    padding-right: 12px;
+}
+.form-items v-card__title {}
+
+.form-terms .v-card__title.headline {
+    padding-left: 0;
+    font-size: 17px!important;
+}
+
+.v-card__text.form-terms.form-items {
+    border: 1px solid #ddd;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.v-card__text.form-terms.form-items .flex.xs12.sm6.md6 {
+    margin-right: 15px;
+}
+
+.v-card__text.form-terms.form-items button.v-btn.theme--light {
+    width: 100%;
+    background: #3ac18f!important;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.v-card__text.form-terms .v-card__title.small-title {
+    padding-left: 0;
+    margin-bottom: 5px;
+    color: rgba(0,0,0,.87);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+span.no-payment {
+    background: #dbe4f7;
+    display: block;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: rgba(0,0,0,0.87);
+}
+
+span.no-payment a {
+    color: rgba(0,0,0,0.87)!important;
+}
+.modal-btn i {
+    font-size: 20px;
+    margin-right: 11px;
+}
+.setting-calendar div[role=list] div[role=listitem]:nth-child(odd) {
+    background: #fafafa;
+    padding: 5px 0;
+    margin-bottom: 5px;
+}
+.setting-calendar .v-list__tile__title {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.setting-calendar .v-list__tile__content .v-select__selections {
+    font-size: 14px!important;
+}
+.v-card__text.cat-list-textarea {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.cat-list .v-card__title {
+    padding-bottom: 0;
+}
+
+.cat-list button.v-btn.v-btn--flat.v-btn--floating, .cat-list-item button.v-btn.v-btn--flat.v-btn--floating {
+    margin-right: 0;
+    margin-left: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.cat-list span.subheading.font-weight-bold {
+    padding-right: 20px;
+    font-weight: 600!important;
+}
+.cat-list.v-card.v-sheet.theme--light.elevation-2 {
+    box-shadow: 0 0 0!important;
+    border-bottom: 1px solid #ddd;
+}
+.v-card__text.all-services {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+span.font-weight-bold.cat-list-item-title {
+    font-weight: 600!important;
+    font-size: 15px;
+}
+.service_modal .v-card__text .v-card.v-sheet.theme--light.elevation-2 {
+    box-shadow: 0 0 0!important;
+}
+
+.service_modal .v-btn__content span {
+    text-transform: capitalize;
+}
+
+.service_modal .v-card__title.headline, .edit-cat-modal .v-card__title.headline, .add-cat-modal .v-card__title.headline{
+    background: #384766!important;
+    color: #fff;
+    font-size: 19px!important;
+    padding-top: 14px;
+}
+.group-btn button i {
+    font-size: 15px;
+    padding-right: 10px;
+}
+
+
+.group-btn button {
+    padding: 0 13px!important;
+}
