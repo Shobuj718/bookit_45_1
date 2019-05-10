@@ -135,7 +135,7 @@
                                     <div class="form-group">
                                         <div class="radio">
                                             <label>
-                                                <input type="checkbox" id="present_number_address" value="present_number_address"> Present my phone number & address to my clients</label>
+                                                <input type="checkbox" id="present_number_address" value="1"> Present my phone number & address to my clients</label>
                                         </div>
                                     </div>
                                 </div>
@@ -162,6 +162,9 @@
 
                         <h4 class="modal-title" id="myModalLabel">Modal 2</h4>
                     </div>
+                    
+                    <p class="send_email_sms_reminders"></p> 
+
                     <div class="modal-body">
                         <form role="form">
                     <p class="statusMsg2"></p>
@@ -171,7 +174,7 @@
                                 <div class="thumbnail">
 
                                     <div class="caption" style="text-align: right;">
-                                      <input type="checkbox" id="business1" value="business1">
+                                      <input type="checkbox" id="manage_client_records" value="1">
                                     </div>
 
                                     <a href="{{ asset('/images/download.jpg') }}" target="_blank">
@@ -184,7 +187,7 @@
                                 <div class="col-md-4">
                                   <div class="thumbnail">
                                     <div class="caption" style="text-align: right;">
-                                      <input type="checkbox" id="business2" value="business2">
+                                      <input type="checkbox" id="send_email_sms_promotions" value="1">
                                     </div>
                                     <a href="{{ asset('/images/download.jpg') }}" target="_blank">
                                       <img src="{{ asset('/images/download.jpg') }}" alt="Lights" style="width:100%">
@@ -196,13 +199,14 @@
                                 <div class="col-md-4">
                                   <div class="thumbnail">
                                     <div class="caption" style="text-align: right;">
-                                      <input type="checkbox" id="business3" value="business3">
+                                      <input type="checkbox" id="send_email_sms_reminders" value="1">
                                     </div>
                                     <a href="{{ asset('/images/download.jpg') }}" target="_blank">
                                       <img src="{{ asset('/images/download.jpg') }}" alt="Lights" style="width:100%">
                                     </a>
                                     <p style="margin-top: 10px;">Send Email & Email Reminders</p>
                                     
+                                     
                                   </div>
                                 </div>  
                             </div>
@@ -210,19 +214,19 @@
                                 <div class="col-md-4">
                                 <div class="thumbnail">
                                     <div class="caption" style="text-align: right;">
-                                      <input type="checkbox" id="business4" value="business4">
+                                      <input type="checkbox" id="add_online_scheduling" value="1">
                                     </div>
                                     <a href="{{ asset('/images/download.jpg') }}" target="_blank">
                                       <img src="{{ asset('/images/download.jpg') }}" alt="Lights" style="width:100%">
                                     </a>
-                                  <p style="margin-top: 10px;">Add online scheduling</p>
+                                    <p style="margin-top: 10px;">Add online scheduling</p>
                                     
                                   </div>
                                 </div>
                                 <div class="col-md-4">
                                   <div class="thumbnail">
                                     <div class="caption" style="text-align: right;">
-                                      <input type="checkbox" id="business5" value="business5">
+                                      <input type="checkbox" id="invoices_estimates" value="1">
                                     </div>
                                     <a href="{{ asset('/images/download.jpg') }}" target="_blank">
                                       <img src="{{ asset('/images/download.jpg') }}" alt="Lights" style="width:100%">
@@ -234,7 +238,7 @@
                                 <div class="col-md-4">
                                   <div class="thumbnail">
                                     <div class="caption" style="text-align: right;">
-                                      <input type="checkbox" id="business6" value="business6">
+                                      <input type="checkbox" id="accept_payments" value="1">
                                     </div>
                                     <a href="{{ asset('/images/download.jpg') }}" target="_blank">
                                       <img src="{{ asset('/images/download.jpg') }}" alt="Lights" style="width:100%">
@@ -244,7 +248,7 @@
                                   </div>
                                   <input type="hidden" name="user_id" id="user_id" class="form-control" value="{{ Auth::user()->id }}">
                                 </div>
-                                <p class="error_business3"></p>  
+                                
                             </div>
                                                           
                         </form>
@@ -252,7 +256,7 @@
 
                     <div class="modal-footer">
                         <!-- <button type="button" class="btn btn-primary" id="modal2">Modal 2</button> -->
-                        <button type="button" class="btn btn-success submitBtn2" onclick="submitContactForm2()" id="modal2">I'm all set 2</button>
+                        <button type="button" class="btn btn-success submitBtn2" onclick="submitContactForm2()" id="modal2">Done</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -293,7 +297,7 @@
             echo "<script>window.location = '/dashboard/onboarding'</script>";
         }
 
-     ?>
+    ?>
     
 
    <!--  <script type="text/javascript">
@@ -340,10 +344,10 @@
 
         //alert(industry_id);
 
-        if(phone_number.trim() == '' ){
+        if(phone_number.trim() == '' || isNaN(phone_number) ){
             //alert('Please enter your phone_number.');
             $('#phone_number').focus();
-             $('.error_phone_number').html('<span style="color:red;">Please enter your phone number</p>');
+             $('.error_phone_number').html('<span style="color:red;">Please enter only number</p>');
             return false;
 
         }
@@ -410,22 +414,22 @@
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         //var address2 = $('#address2').val();
         //var business = $("input[type='checkbox']").val();
-        var business1 = $('#business1:checked').val();
-        var business2 = $('#business2:checked').val();
-        var business3 = $('#business3:checked').val();
-        var business4 = $('#business4:checked').val();
-        var business5 = $('#business5:checked').val();
-        var business6 = $('#business6:checked').val();
+        var manage_client_records = $('#manage_client_records:checked').val();
+        var send_email_sms_promotions = $('#send_email_sms_promotions:checked').val();
+        var send_email_sms_reminders = $('#send_email_sms_reminders:checked').val();
+        var add_online_scheduling = $('#add_online_scheduling:checked').val();
+        var invoices_estimates = $('#invoices_estimates:checked').val();
+        var accept_payments = $('#accept_payments:checked').val();
 
         var user_id = $('#user_id').val();
 
         
-        //alert(business3);
+        //alert(send_email_sms_reminders);
 
-        if(business3.trim() == '' ){
-            //alert('Please enter your phone_number.');
-            $('#business3').focus();
-             $('.error_business3').html('<span style="color:red;">Please enter your business</p>');
+        if(!manage_client_records || !send_email_sms_promotions || !send_email_sms_reminders || !add_online_scheduling || !invoices_estimates || !accept_payments){
+            alert('Please select at least one.');
+            $('#send_email_sms_reminders').focus();
+             $('.send_email_sms_reminders').html('<span style="color:red;">Please select at least one</p>');
             return false;
 
         }
@@ -434,13 +438,13 @@
             $.ajax({
                 type:'POST',
                 url:'{{url("/services")}}',
-                data:{_token:CSRF_TOKEN, business1:business1, business2:business2, business1, business3:business3, business4:business4, business5:business5, business6:business6, user_id:user_id},
+                data:{_token:CSRF_TOKEN, manage_client_records:manage_client_records, send_email_sms_promotions:send_email_sms_promotions, send_email_sms_reminders:send_email_sms_reminders, add_online_scheduling:add_online_scheduling, invoices_estimates:invoices_estimates, accept_payments:accept_payments, user_id:user_id},
                 dataType:'json',
                
                 success:function(data2){
                     console.log(data2.msg2);
                     console.log(data2.business3);
-                    if(data2.msg2 == 'ok2'){
+                    if(data2.success == 'ok2'){
                         window.location = '{{ url("/dashboard/onboarding") }}';
                        $("#modal2").on("click", function(){
                            $('#myModal2').modal('hide');

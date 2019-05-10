@@ -230,8 +230,14 @@ Route::middleware(['role:business-admin'])->group(function () {
     Route::post('/services', 'Pages\OnboardController@services');
 });*/
 
-Route::middleware(['auth', 'verified'])->group(function(){
+/*Route::middleware(['auth', 'verified'])->group(function(){
     Route::get('/dashboard/onboarding', 'Pages\OnboardController@onboarding');
     Route::post('/business', 'Pages\BusinessprofileController@business');
     Route::post('/services', 'Pages\BusinessneedsController@services');
+});*/
+
+Route::middleware(['auth', 'verified'])->group(function(){
+    Route::get('/dashboard/onboarding', 'Pages\OnboardController@onboarding');
+    Route::post('/business', 'Actions\BusinessProfileController@business');
+    Route::post('/services', 'Actions\BusinessProfileController@services');
 });
