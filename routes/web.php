@@ -241,3 +241,10 @@ Route::middleware(['auth', 'verified'])->group(function(){
     Route::post('/business', 'Actions\BusinessProfileController@business');
     Route::post('/services', 'Actions\BusinessProfileController@services');
 });
+
+
+/*Route::middleware(['auth', 'verified'])->group(function(){
+    Route::get('/dashboard/onboarding', 'Pages\OnboardController@onboarding');
+    Route::post('/business', 'Actions\OnboardController@business');
+    Route::post('/services', 'Actions\BusinessProfileController@services');
+});*/

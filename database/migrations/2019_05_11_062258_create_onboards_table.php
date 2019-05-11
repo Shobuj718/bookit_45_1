@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBusinessProfilesTable extends Migration
+class CreateOnboardsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateBusinessProfilesTable extends Migration
      */
     public function up()
     {
-        Schema::create('business_profiles', function (Blueprint $table) {
+        Schema::create('onboards', function (Blueprint $table) {
             $table->increments('id');
             $table->string('slug');      
             $table->integer('user_id');
             $table->integer('industry_id')->nullable();
             $table->integer('profession_id')->nullable();
             $table->string('country_with_code')->nullable();
-            $table->string('phone_number')->nullable();
+            $table->integer('phone_number')->nullable();
             $table->string('persons')->nullable();
             $table->string('web_url')->nullable();
             $table->string('address')->nullable();
@@ -44,6 +44,6 @@ class CreateBusinessProfilesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('business_profiles');
+        Schema::dropIfExists('onboards');
     }
 }
