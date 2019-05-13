@@ -10,20 +10,28 @@ use App\Models\BusinessNeed;
 class BusinessProfileController extends Controller
 {
     public function business(Request $request)
-    {
-		
+    {        
+
 		$business = new BusinessProfile;
 
     	$slug    = md5(uniqid(time()));
 
         //$user_id = Auth::user()->id;
 
+
+
         $business->slug    = md5(uniqid(time()));
         $business->user_id = $request->user_id;
         $business->industry_id = $request->industry_id;
         $business->profession_id = $request->profession_id;
+
         $business->country_with_code = $request->country_with_code;
-        $business->phone_number = $request->phone_number;
+
+        $str = $business->country_with_code;
+        $ext = substr( strrchr($str, ' '), 1);
+
+        $business->phone_number = $ext.$request->phone_number;
+
         $business->persons = $request->persons;
         $business->web_url = $request->web_url;
         $business->address = $request->address;
@@ -74,11 +82,14 @@ class BusinessProfileController extends Controller
 
     	$business->status = 1;
     	$business->save();
+
+        /*$str = $business->country_with_code;
+        $ext = substr( strrchr($str, ' '), 1);*/
     	
     	$response = [
     		'success' => 'ok',
     		'message' => "Business profile created",
-            'slug' => $slug,
+            'slug' => $ext,
             'profession_id' => $request->all()
     	];
     	return response()->json($response);

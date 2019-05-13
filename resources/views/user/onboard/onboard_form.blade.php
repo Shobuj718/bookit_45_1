@@ -1,13 +1,7 @@
-<?php
-    //if( $user_type == 'user' && 1===1){
-    if( $user_type == 'user' && $businessId !== 1){
-      
-    echo "<script>window.location = '/dashboard/onboarding'</script>";
-    }
-?>
 
 @extends('layouts.user.dashboard')
 @section('content')
+@include('user.onboard.index')
 <v-layout row wrap>
     <v-flex md12 mb20>
         <v-card>

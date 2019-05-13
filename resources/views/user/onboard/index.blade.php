@@ -1,5 +1,5 @@
 <head>
-    <title>Onboard System</title>
+    <title>MIYN Onboard System</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
@@ -19,6 +19,10 @@
     html, body{height: 100%; }
     body{font-size: 14px; line-height: 18px;}
     /****************************************/
+    #phone_number-error{
+        background-color: red;
+        color: red;
+    }
     .help-inline-error{color:red;}
     .padding5 {
         padding: 5px;
@@ -146,7 +150,7 @@
 
     <div class="container">
 
-        <button class="btn btn-default" data-toggle="modal" data-target="#loginModal">Login</button>
+        <!-- <button class="btn btn-default" data-toggle="modal" data-target="#loginModal">Login</button> -->
 
         <div class="modal fade" id="loginModal" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="container mainbody">
@@ -157,7 +161,7 @@
   <div class="panel">
     
     <div class="panel-body">
-      <form name="basicform" id="basicform" method="post" action="yourpage.html">
+      <form name="basicform" id="basicform" method="post">
         
         <div id="sf1" class="frm">
           <fieldset>
@@ -210,9 +214,9 @@
                 <div class="col-md-5">
                     <div class="form-group">
                         <select name="country_with_code" id="country_with_code" class="col-sm-10 form-control">
-                            <option value="country1 88">Country1</option>
-                            <option value="country2 99">Country2</option>
-                            <option value="country3 66">Country3</option>
+                            <option value="country1 88">Country1 (88)</option>
+                            <option value="country2 99">Country2 (99)</option>
+                            <option value="country3 66">Country3 (66)</option>
                         </select>
                     </div>
                 </div>
@@ -418,7 +422,7 @@
 
              <div class="panel-heading">
               <h4 class="text-center">Need a little extra hand-holding?</h4>
-              <p class="text-center"><a href="http://127.0.0.1:8000/dashboard">Schedule a call</a> with an onboarding specialist to get a one-on-one walk through</p>
+              <p class="text-center"><a href="http://127.0.0.1:8000">Schedule a call</a> with an onboarding specialist to get a one-on-one walk through</p>
             </div>
 
           </fieldset>
@@ -433,15 +437,15 @@
 </div>
 
 <?php
-    if(1===1){
+    if( $user_type == 'user' && 1===1){
         echo '<script type="text/javascript">
-        $(document).ready(function(){
-            $("#loginModal").modal("show");
-        });
-    </script>';
+            $(document).ready(function(){
+                $("#loginModal").modal("show");
+            });
+            </script>';
     }
     else{
-        echo "<script>window.location = '/dashboard/onboarding'</script>";
+        echo "<script>window.location = '/dashboard'</script>";
     }
 ?>
 
@@ -459,7 +463,7 @@
           maxlength: 11
         },
         web_url: {
-          required: true,
+          //required: true,
           url: true
         },
 
@@ -479,7 +483,7 @@
 
     $(".open2").click(function(e) {
         e.preventDefault();
-        /*var ck_box = $('input[type="checkbox"]:checked').length;
+        var ck_box = $('input[type="checkbox"]:checked').length;
         console.log(ck_box); 
 
         if(ck_box > 0){
@@ -488,14 +492,14 @@
             $("#sf3").show("slow");
         } 
         else{
-            alert("hhhh");
+            alert("Please select at least one.");
             return false;
-        }*/
-      if (v.form()) {
+        }
+      /*if (v.form()) {
 
         $(".frm").hide("fast");
         $("#sf3").show("slow");
-      }
+      }*/
     });
     
     $(".open3").click(function() {
@@ -535,8 +539,8 @@
                     console.log(data.message);
                     console.log(data.slug);
                     console.log(data.profession_id);
-                    if(data.success == 'ok2'){
-                        window.location = 'http://localhost/multi_step_form/test3.php';
+                    if(data.success == 'ok'){
+                        window.location = '/dashboard';
                     }else{
                         $('.statusMsg').html('<span style="color:red;">Some problem occurred, please try again.</span>');
                     }

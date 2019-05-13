@@ -74,4 +74,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function currentPackageName() {
         return $this->hasCurrentSubscription() ? $this->subscriptions()->latest()->first()->item_name : null;
     }
+
+    public function businessProfile()
+    {
+        return $this->hasOne(BusinessProfile::class);
+    }
+
 }

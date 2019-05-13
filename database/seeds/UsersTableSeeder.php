@@ -30,5 +30,14 @@ class UsersTableSeeder extends Seeder
         $user->password = Hash::make('123456');
         $user->email_verified_at = \Carbon\Carbon::now()->format('Y-m-d H:i:s');
         $user->save();
+
+        $user = new User;
+        $user->firstname = "Rana";
+        $user->lastname = "rana";
+        $user->email = "rana@gmail.com";
+        $user->slug = uniqid();
+        $user->password = Hash::make('123456');
+        $user->email_verified_at = \Carbon\Carbon::now()->format('Y-m-d H:i:s');
+        $user->save();
     }
 }

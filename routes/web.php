@@ -237,7 +237,7 @@ Route::middleware(['role:business-admin'])->group(function () {
 });*/
 
 Route::middleware(['auth', 'verified'])->group(function(){
-    Route::get('/dashboard/onboarding', 'Pages\OnboardController@onboarding');
+    Route::get('/dashboard/onboarding', 'Pages\DashboardController@getDashboard2');
     Route::post('/business', 'Actions\BusinessProfileController@business');
     Route::post('/services', 'Actions\BusinessProfileController@services');
 });

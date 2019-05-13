@@ -5,10 +5,39 @@ namespace App\Http\Controllers\Pages;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Models\BusinessProfile;
 
 class DashboardController extends Controller
 {
     public function getDashboard(){
+        $user = Auth::user();
+        $login_id =  Auth::user()->id;
+
+
+        $businessProfileId = BusinessProfile::where('user_id', $login_id)->first();
+        //var_dump($businessProfileId);
+        if($businessProfileId == NULL){
+            $businessId = 0;
+        }else{
+            $businessId = $businessProfileId->status;
+        }
+
+
+        //$businessId = 1;
+        
+        if($user->hasRole('admin')){
+            $user_type = "admin";
+        }
+
+        if($user->hasRole('business-admin') || $user->hasRole('staff')){
+            $user_type = "user";
+        }
+
+        
+        return view($user_type.'.dashboard', compact('user_type', 'businessId'));
+        //return view($user_type.'.onboard.index');
+    }
+    public function getDashboard2(){
         $user = Auth::user();
         
         if($user->hasRole('admin')){
@@ -20,7 +49,8 @@ class DashboardController extends Controller
         }
 
         
-        return view($user_type.'.dashboard');
+        //return view($user_type.'.dashboard', compact('user_type'));
+        return view($user_type.'.onboard.onboard_form', compact('user_type'));
         //return view($user_type.'.onboard.index');
     }
 
